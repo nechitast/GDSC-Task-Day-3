@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>All about K-Dramas</title>
+    <link rel="icon" type="image/png" href="./img/kdrama.png" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navBar">
+        <div clas="navLeft">
+            <h3>Welcome to All about K-Dramas</h3>
+        </div>
+    </div>
+    <div class="pageContainer">
+        <div class="pageCenter">
+            <h1>Top Korean Dramas</h1>
+            <p class="ltext">Data sourced from <a href="https://mydramalist.com/shows/top_korean_dramas" target="_blank">MyDramaList❤️</a></p>
+    
+    <div class="boxContainer">
+        <div class="search-box">
+            <table class="elementsContainer">
+                <tr>
+                    <td>
+                        <input type="text" id="myInput" oninput="processSearch(this)" placeholder="Search here.." class="search">
+                    </td>
+                    <td>
+                        <a href="#"><i class="material-icons">search</i>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+            
+            <div id="movieList">
+
+                <div class="movieItem" onclick="openModal(this, movieModal)">
+                    <span class="stext movieRank">0</span>
+                    <img class="movieThumb loading" src="./img/load.png">
+                    <a class="stext movieTitle">Loading Data...</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="movieModal" class="modal">
+
+        <!-- Modal content -->
+        <span class="close">&times;</span>
+        <div class="modalContent">
+            
+            <div class="movieInfo">
+
+                <img id="mvPoster" class="moviePoster" src="./img/load.png">
+
+                <div class="aboutMovie"> 
+                    <a id="mvTitle" class="sltext">Please wait...</a>
+                    <span id="mvReleaseDate" class="sltext block">2020</span>
+                    <span id="mvGenre" class="s1text block">Comedy, Drama, Romance, Family</span>
+                    <div id="starRating" class="star"> 
+                        <span class="fullstar fa fa-solid fa-star"></span>
+                        <span class="halfstar fa fa-solid fa-star-half-stroke"></span>
+                        <span class="emptystar fa fa-regular fa-star"></span>
+                    </div>
+                    <a id="mvRatingNum" class="sltext">420/03</a>
+                </div>
+             
+            </div>
+
+            <div class="movieDesc">
+                <h4 class="sltext">Description:</h4>
+                <p id="movieDesc" class="sltext">This website is made for the purpose of GDSC day 3 task. The data is sourced from MyDramaList. The code is sourced from https://github.com/misaalanshori/GDSC-Website-List-Movie</p>
+                <a id="malpage" class="centerText boldText kindabigText" href="#" target="_blank">MyDramaList❤️</a>
+            </div>
+
+        </div>
+      
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p class="copyright-text">&copy; 2021 All Rights Reserved.  By <a class="link" href="https://github.com/nechitast"> Nechita Samantha</a></p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
